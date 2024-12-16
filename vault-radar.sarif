@@ -1,0 +1,672 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "HashiCorp Vault Radar",
+          "rules": [
+            {
+              "id": "private_key",
+              "name": "Private key",
+              "shortDescription": {
+                "text": "Detected risk of type private_key and category secret"
+              }
+            },
+            {
+              "id": "azure_active_directory_client_id",
+              "name": "Microsoft Azure Active Directory client ID",
+              "shortDescription": {
+                "text": "Detected risk of type azure_active_directory_client_id and category secret"
+              }
+            },
+            {
+              "id": "password_assignment",
+              "name": "Password assignment",
+              "shortDescription": {
+                "text": "Detected risk of type password_assignment and category secret"
+              }
+            },
+            {
+              "id": "secret_assignment",
+              "name": "Secret assignment",
+              "shortDescription": {
+                "text": "Detected risk of type secret_assignment and category secret"
+              }
+            },
+            {
+              "id": "password_in_url",
+              "name": "Password in URL",
+              "shortDescription": {
+                "text": "Detected risk of type password_in_url and category secret"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "1497f76ca3be4d2bb90a506e309039c0f7745dfc",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "3-ed25519/ed25519_private_key.pem",
+            "tags": null,
+            "textual_context": "***--",
+            "value_hash": "+R7WV3JAIk0OWqgM0YE3juQ84Zd3n8hgYBvVQQEewrw"
+          },
+          "ruleId": "private_key",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Private key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "3-ed25519/ed25519_private_key.pem"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "3-ed25519/ed25519_private_key.pem:1:1"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "48e672d0975eaf7ee0df803dba7e56f6d6f6e63818308a5f157bce8a1d6143d4"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "60430930d63fd4491fd2a33de10ee587443e4495",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "2-x.509/ca.key",
+            "tags": null,
+            "textual_context": "***--",
+            "value_hash": "vzyOU+OzoKgsVQz90EPNgwaF8Eq+YGYujW6FU2iXoUM"
+          },
+          "ruleId": "private_key",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Private key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "2-x.509/ca.key"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 28,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "2-x.509/ca.key:1:1"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 28,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "f21ac62d88358a96cd42716e2797349d158acef9e48b0833206984c550faf842"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "cf80167b3673c181bb4ccdd8eab3c16a325d0863",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "1-api-key/.env.azure",
+            "tags": [
+              "low_entropy"
+            ],
+            "textual_context": "..._CLIENT_ID=***",
+            "value_hash": "z03Zdc249+fK6BJe/ODimK+6bKGvKfOEEVMAysgBRN4"
+          },
+          "ruleId": "azure_active_directory_client_id",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Microsoft Azure Active Directory client ID"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.azure"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 17,
+                  "endLine": 2,
+                  "endColumn": 53
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.azure:2:17"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 17,
+                  "endLine": 2,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "b41defb53801218deee37d09bd813d45eec24fd4a6eaed49aa9a7668472c4c0d"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "20c2fd07f18d873c415d87f2da8d8fcdeda03288",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "3-rsa/private_key.pem",
+            "tags": null,
+            "textual_context": "***--",
+            "value_hash": "gD8kaqQcNVLpnGKFmMywgGVKxZnzgno+I6ogTAqNJnc"
+          },
+          "ruleId": "private_key",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Private key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "3-rsa/private_key.pem"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 28,
+                  "endColumn": 26
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "3-rsa/private_key.pem:1:1"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 28,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "5830972e173b47619acc1de70bc18049514765e950cc148b279306a5c73c5aea"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "3efe77ed57477afae2fa2ccbdaaa567e6c42608d",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "7-database/.env.mongodb",
+            "tags": [
+              "simple_password"
+            ],
+            "textual_context": "password=\"***\"",
+            "value_hash": "JlawPRC9W6SRq7gPDQ7uylrZF7gJJsUm/ryUkuo0K/o"
+          },
+          "ruleId": "password_assignment",
+          "ruleIndex": 2,
+          "level": "note",
+          "message": {
+            "text": "Password assignment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.mongodb"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 11,
+                  "endLine": 2,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.mongodb:2:11"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 11,
+                  "endLine": 2,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "b7edb27d5e3253c92eb890ee453326304faf535ef8af77a78738301abef7b126"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "bdcbdaba6c783676e1ab3892665b5ec79987cd04",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "6-randsom-string/.env",
+            "tags": [
+              "low_entropy",
+              "simple_password"
+            ],
+            "textual_context": "password=***",
+            "value_hash": "eC5JkM5oV3SCV3mSvp605FgHBuYY0OaJWJGkNIu5fKs"
+          },
+          "ruleId": "password_assignment",
+          "ruleIndex": 2,
+          "level": "note",
+          "message": {
+            "text": "Password assignment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "6-randsom-string/.env"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 10,
+                  "endLine": 2,
+                  "endColumn": 24
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "6-randsom-string/.env:2:10"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 10,
+                  "endLine": 2,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "037fabadfc7628e90219e339db71b717ae7a8640f40c2e5bffae21273d719c28"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "57eb63a5af677747e2f44c1516b7483fe551a407",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "1-api-key/.env.ncp",
+            "tags": [
+              "common_word_in_secret"
+            ],
+            "textual_context": "NCP_ACCESS_KEY=***",
+            "value_hash": "Nd7ktuvc+50L4QgY3NGWATYZRHOO6pY+5WnKqi0iNW0"
+          },
+          "ruleId": "secret_assignment",
+          "ruleIndex": 3,
+          "level": "note",
+          "message": {
+            "text": "Secret assignment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.ncp"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 16,
+                  "endLine": 1,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.ncp:1:16"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 16,
+                  "endLine": 1,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "afac14bd4ef89a3e3a8b093209a814f23e5d7a0b0b3eb0c71a58105672ffb81c"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "50c05d6642fe0939f59f94f0fd4b8822eb6bbaec",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "1-api-key/.env.gcp",
+            "tags": null,
+            "textual_context": "GCP_CLIENT_SECRET=***",
+            "value_hash": "V2rfWOlKGPy15HIgy/zr4jHejl3w3KW7iLjKXdUmwIU"
+          },
+          "ruleId": "secret_assignment",
+          "ruleIndex": 3,
+          "level": "warning",
+          "message": {
+            "text": "Secret assignment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.gcp"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 19,
+                  "endLine": 2,
+                  "endColumn": 57
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.gcp:2:19"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 19,
+                  "endLine": 2,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "e24b8c95cf58b7aca9e82930b56359a04069296c31b6effc1ea239306610608a"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "ed4006d9c7d46af62ff50ae88e474e2043be912b",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "7-database/.env.rds",
+            "tags": [
+              "low_entropy",
+              "simple_password"
+            ],
+            "textual_context": "password=\"***\"",
+            "value_hash": "VD5tn4k/yFkuNkEkJAFvXh7vyD4RpQCCh6TcruxdgGU"
+          },
+          "ruleId": "password_assignment",
+          "ruleIndex": 2,
+          "level": "note",
+          "message": {
+            "text": "Password assignment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.rds"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 11,
+                  "endLine": 2,
+                  "endColumn": 31
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.rds:2:11"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 11,
+                  "endLine": 2,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "9e6d6a3282272cb064992bd3fe27e79d15d65835625a1007bd7f683dc2a08072"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "cf80167b3673c181bb4ccdd8eab3c16a325d0863",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "1-api-key/.env.azure",
+            "tags": null,
+            "textual_context": "AZURE_CLIENT_SECRET=***",
+            "value_hash": "SoQcn70xxD0SBWxzS9ulcOt7yhRRLtA6LeWdWieNnis"
+          },
+          "ruleId": "secret_assignment",
+          "ruleIndex": 3,
+          "level": "warning",
+          "message": {
+            "text": "Secret assignment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.azure"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 21,
+                  "endLine": 3,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "1-api-key/.env.azure:3:21"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 21,
+                  "endLine": 3,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "2e19e7a71bb1b56658143eb1a9bc4d0981402a1aa23fcaf5cf92b51476c61d83"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "cd3b1cbf5412c3c1407e71cc9197e4a06f863076",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "7-database/.env.mongodb.uri.encrypted",
+            "tags": [
+              "common_secret",
+              "simple_password",
+              "low_entropy"
+            ],
+            "textual_context": "...GODB_URI=\"mongodb://user:***@cluster0.mongodb.net:27017/mydatabas...",
+            "value_hash": "KNenPbDcP2918i4SUZzMLIGwYyelaATG2YxtTxd2Ft8"
+          },
+          "ruleId": "password_in_url",
+          "ruleIndex": 4,
+          "level": "note",
+          "message": {
+            "text": "Password in URL"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.mongodb.uri.encrypted"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 29,
+                  "endLine": 1,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.mongodb.uri.encrypted:1:29"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 29,
+                  "endLine": 1,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "5f71d35169b7e2fd83600f16497a4bb2afd49db861d312e908a81196faa45b7c"
+          }
+        },
+        {
+          "properties": {
+            "activeness": "unknown",
+            "category": "secret",
+            "folder/file_hash": "8403cada33a879c1950eddb7867d39583a74a762",
+            "is_historic": false,
+            "is_metadata_risk": false,
+            "rel_path": "7-database/.env.rds.uri",
+            "tags": [
+              "low_entropy",
+              "common_secret",
+              "simple_password"
+            ],
+            "textual_context": "...S_PG_URI=\"postgres://user:***@mydbinstance.123456789012.us-east-1.rds.amazonaws.com:5432/mydatabas...",
+            "value_hash": "KNenPbDcP2918i4SUZzMLIGwYyelaATG2YxtTxd2Ft8"
+          },
+          "ruleId": "password_in_url",
+          "ruleIndex": 4,
+          "level": "note",
+          "message": {
+            "text": "Password in URL"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.rds.uri"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 29,
+                  "endLine": 1,
+                  "endColumn": 37
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "7-database/.env.rds.uri:1:29"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 29,
+                  "endLine": 1,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "risk_fingerprint/v1": "549faa3c9a3291d388a8272bff1dab1ef80de6e673fbfa708ac429dd2339825b"
+          }
+        }
+      ]
+    }
+  ]
+}
