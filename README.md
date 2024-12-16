@@ -23,13 +23,13 @@ LOG, MIDDLE 레벨로도 디텍트가 되고 이를 리뷰할 수 있으면 좋�
 <details>
 <summary>Trivy 결과</summary>
 
-<img src="result-trivy.png" style="width:800px;"/>
+<img src="./docs/result-trivy.png" style="width:800px;"/>
 </details>
 
 <details>
 <summary>Vault Radar 결과</summary>
 
-<img src="result-vault-radar.png" style="width:800px;"/>
+<img src="./docs/result-vault-radar.png" style="width:800px;"/>
 </details>
 
 | No. | Option                                               | Trivy                | Vault Radar                           |
