@@ -1,8 +1,8 @@
-# Trivy vs Vault Rdara
+# Trivy vs Vault Radar
 
 This document compares the performance, speed of Trivy and Vault Radar.
 
-All scripts are based on [Trivy Use Case (en)]() and [Vault Rdara Use Case (en)]().
+All scripts are based on [Trivy Usecase (en)]() and [Vault Rdara Usecase (en)]().
 
 > For repository purpose, I talk about `result of compare` at the beginning, followed by [Install](./README_en.md#installation), [Configuration](./README_en.md#configuration) and [Get-Started](./README_en.md#get-started)
 

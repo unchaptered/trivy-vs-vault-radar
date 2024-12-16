@@ -2,7 +2,7 @@
 
 본 문서는 Trivy와 Vault Radar의 성능, 속도 등을 비교하고 있습니다.
 
-실습에 사용한 스크립트는 [Trivy Use Case (ko)](https://github.com/unchaptered/trivy-use-case/blob/main/docs/README_ko.md)와 [Vault Radar Use Case (ko)](https://github.com/unchaptered/vault-radar-use-case/blob/main/docs/README_ko.md)를 참고하였습니다.
+실습에 사용한 스크립트는 [Trivy Usecase (ko)](https://github.com/unchaptered/trivy-use-case/blob/main/docs/README_ko.md)와 [Vault Radar Usecase (ko)](https://github.com/unchaptered/vault-radar-use-case/blob/main/docs/README_ko.md)를 참고하였습니다.
 
 > 저장소 목적상 결과를 서두에 배치하고 재연을 위한 [설치](./READMD_ko.md#설치), [설정](./READMD_ko.md#설정) 및 [시작](./READMD_ko.md#시작) 순으로 배치하였습니다.
 
