@@ -32,18 +32,18 @@ LOG, MIDDLE 레벨로도 디텍트가 되고 이를 리뷰할 수 있으면 좋�
 <img src="result-vault-radar.png" style="width:800px;"/>
 </details>
 
-| No. | Option                                               | Trivy                      | Vault Radar                                |
-| --- | ---------------------------------------------------- | -------------------------- | ------------------------------------------ |
-| 1   | API Key (aws, gcp, ncp, azure)                       | detect restricted format\* | detect all format\*                        |
-| 2   | X.509 (key, csr, crt key)                            | detect `key` only          | detect `key` only                          |
-| 3   | RSA, ED25519 (priv, pub key)                         | detect `priv` only         | detect `priv` only                         |
-| 4   | Encoded String (base32, base64)                      |                            |                                            |
-| 5   | MD5, SHA-1, SHA-256, SHA3-256, PBKDF2, Argon2        |                            |                                            |
-| 6   | Random String                                        |                            |                                            |
-| 7   | DB Params (MongoDB URI, RDS URI, Username, Password) |                            | detect specific key format (e.g. password) |
-| 8   | AI Model                                             |                            |                                            |
-| 9   | Blockchain Contract                                  |                            |                                            |
-| 10  | PCI-SSC (Username, Location, ID, Passport)           |                            |                                            |
+| No. | Option                                               | Trivy                | Vault Radar                           |
+| --- | ---------------------------------------------------- | -------------------- | ------------------------------------- |
+| 1   | API Key (aws, gcp, ncp, azure)                       | 제한된 형태만 감지\* | 대다수의 형태 감지\*                  |
+| 2   | X.509 (key, csr, crt key)                            | `key`만 감지         | `key` 만 감지                         |
+| 3   | RSA, ED25519 (priv, pub key)                         | `priv`만 감지        | `priv` 만 감지                        |
+| 4   | Encoded String (base32, base64)                      |                      |                                       |
+| 5   | MD5, SHA-1, SHA-256, SHA3-256, PBKDF2, Argon2        |                      |                                       |
+| 6   | Random String                                        |                      |                                       |
+| 7   | DB Params (MongoDB URI, RDS URI, Username, Password) |                      | 특정한 형태의 키만 감지(예, password) |
+| 8   | AI Model                                             |                      |                                       |
+| 9   | Blockchain Contract                                  |                      |                                       |
+| 10  | PCI-SSC (Username, Location, ID, Passport)           |                      |                                       |
 
 ## 설치
 
